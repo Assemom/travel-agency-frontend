@@ -1,0 +1,242 @@
+/* sticky menu  */
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: smothScroll 1s forwards;
+  background: var(--white);
+  z-index: 999;
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+@keyframes smothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.is-sticky .navbar .navbar-brand a,
+.is-sticky .navbar .offcanvas-body a {
+  color: var(--black) !important;
+}
+
+.is-sticky .toggle_btn {
+  color: var(--primaryClr) !important;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 12px 0px;
+  width: 100%;
+}
+
+header .navbar .navbar-brand a {
+  font-size: 22px;
+  color: var(--white);
+  line-height: 150%;
+  font-family: var(--fontFamily1);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+header .navbar .offcanvas-body a {
+  font-size: 14px;
+  color: var(--white) !important;
+  line-height: 150%;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .navbar .offcanvas-body .dropdown-menu a {
+  color:black !important
+}
+
+header .navbar .offcanvas-body a:hover {
+  color: var(--primaryClr) !important;
+}
+
+header .navbar .offcanvas-body .dropdown-menu {
+  min-width: 12rem;
+}
+
+header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
+  color: var(--black) !important;
+}
+
+header .navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar .navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.is-sticky .navbar .navbar-brand img {
+  height: 50px !important; /* Slightly smaller when sticky */
+}
+
+@media only screen and (max-width: 991px) {
+  header .navbar .toggle_btn {
+    font-size: var(--bodyText);
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 7px 10px;
+  }
+
+  .is-sticky .navbar .toggle_btn {
+    border: 2px solid var(--primaryClr);
+  }
+
+  .offcanvas-header {
+    border: 1px solid gainsboro;
+  }
+
+  .offcanvas-header .logo{
+    font-size: 26px;
+    color: var(--black) !important;
+    font-family: var(--fontFamily1);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .offcanvas-body .nav-link {
+    padding: 12px 0px;
+    color:var(--black);
+  }
+
+  .offcanvas-body .dropdown-item{
+    padding: 12px 10px;
+    color:var(--black);
+  }
+
+  header .navbar .navbar-brand img {
+    height: 50px !important;
+  }
+  
+  .offcanvas-header img {
+    height: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  header .navbar .navbar-brand img {
+    height: 45px !important;
+  }
+}
+
+.primaryBtn {
+  background-color: #f0c17a;
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #f0c17a;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+/* Add to existing header.css */
+.user-avatar {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #f0c17a;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 12px;
+  min-width: 200px;
+  display: none;
+  z-index: 1000;
+}
+
+.user-avatar:hover .user-dropdown {
+  display: block;
+}
+
+.user-info {
+  padding: 8px;
+}
+
+.user-name {
+  display: block;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-email {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #eee;
+  margin: 8px 0;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #fff5f5;
+}
+
+.user-dropdown .dropdown-item {
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.user-dropdown .dropdown-item:hover {
+  background: #f8f9fa;
+  color: #f0c17a;
+}
+
+.user-dropdown .dropdown-item i {
+  font-size: 18px;
+}
+
+.user-dropdown .dropdown-item.active {
+  background: #f8f9fa;
+  color: #f0c17a;
+}

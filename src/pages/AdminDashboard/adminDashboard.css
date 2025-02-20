@@ -1,0 +1,116 @@
+.admin-dashboard-page {
+  padding: 120px 0 40px;
+  background: black;
+  min-height: calc(100vh - 80px);
+}
+
+.dashboard-container {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+/* Inherit styles from user dashboard */
+.profile-card,
+.dashboard-nav,
+.dashboard-card {
+  /* Same styles as user dashboard */
+}
+
+/* Additional admin-specific styles */
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background: #f0c17a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.stat-details h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-details p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Table styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Action buttons */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-warning {
+  background: #f0c17a;
+  border-color: #f0c17a;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: #e4b165;
+  border-color: #e4b165;
+}
+
+/* Modal styles */
+.modal-header {
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+  
+  .stat-card {
+    margin-bottom: 15px;
+  }
+  
+  .table-responsive {
+    margin-bottom: 0;
+  }
+} 

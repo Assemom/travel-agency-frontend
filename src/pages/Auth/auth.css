@@ -1,0 +1,205 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 0px 0;
+}
+
+.auth-page .container {
+  max-width: 1100px;
+}
+
+.auth-page .row {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 650px;
+}
+
+.auth-image-col {
+  background-image: url('../../assets/images/greatpyramid.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.auth-image-col::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.auth-form-col {
+  background: white;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.auth-form h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #f8f9fa;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.divider span {
+  background: white;
+  padding: 0 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #f0c17a;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(240, 193, 122, 0.2);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f0c17a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #e4b165;
+}
+
+.switch-auth {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.switch-auth a {
+  color: #f0c17a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 20px;
+  }
+
+  .auth-page .row {
+    height: auto;
+  }
+
+  .auth-image-col {
+    display: none;
+  }
+  
+  .auth-form-col {
+    border-radius: 12px;
+    padding: 30px 20px;
+  }
+
+  .auth-form {
+    padding: 0;
+  }
+} 
